@@ -21,3 +21,8 @@
     border-radius: 15px;
     width: 50vh;
 }
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+}

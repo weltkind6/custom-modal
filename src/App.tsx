@@ -11,7 +11,7 @@ function App() {
         <Modal
             active={isOpened}
             setActive={setIsOpened}
-        >текст
+        >Your data
         </Modal>
       </div>
   );

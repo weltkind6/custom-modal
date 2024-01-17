@@ -7,7 +7,7 @@
     place-items: center;
     transform: scale(0);
     transition: 1s;
-    opacity: 0;
+    opacity: 1;
 }
 
 .modal.active {
@@ -20,6 +20,7 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
     border-radius: 15px;
     width: 50vh;
+    background: #fff;
 }
 
 .inputWrapper {

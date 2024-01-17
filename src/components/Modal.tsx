@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styles from './styles.module.css';
 
 interface Props {
@@ -7,6 +7,18 @@ interface Props {
     children?: React.ReactNode;
 }
 const Modal = ({active, setActive, children}: Props) => {
+    const onKeyDown = (e: KeyboardEvent) => {
+        if(e.key === 'Escape') {
+            setActive(false);
+        }
+    }
+
+    useEffect(() => {
+        if(active) {
+            window.addEventListener('keydown', onKeyDown);
+        }
+    }, [active])
+
     return (
         <div
             className={`${styles.modal} ${active? styles.active : ''}`}
